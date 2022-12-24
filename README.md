@@ -1,6 +1,6 @@
 ## Server side
-cd server
 ```bash
+cd server
 docker compose up
 ```
 
