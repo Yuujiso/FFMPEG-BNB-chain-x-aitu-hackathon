@@ -1,0 +1,59 @@
+.home {
+  padding: 110px 50px 50px 50px;
+  width: 100%;
+  background-color: rgb(42, 42, 42);
+  height: 100%;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 38px;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.stream {
+  width: 250px;
+  height: 275px;
+  background-color: rgb(62, 62, 62);
+  color: white;
+  border-radius: 7.5px;
+  padding: 10px;
+}
+.img {
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  border-radius: 5px;
+}
+.stream-main {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.title,
+.viewers {
+  text-decoration: none;
+}
+.viewers {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.658);
+}
+.visit-btn {
+  background-color: green;
+  padding: 5px 20px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+}
+.visit-btn a {
+  text-decoration: none;
+  color: white;
+}

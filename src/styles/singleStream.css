@@ -1,0 +1,119 @@
+.stream-container {
+  padding: 110px 50px 50px 50px;
+  width: 100%;
+  background-color: rgb(42, 42, 42);
+  height: 100%;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.stream-block {
+  display: flex;
+  width: 100%;
+  height: auto;
+  gap: 30px;
+  height: 500px;
+}
+.stream-img {
+  flex: 75%;
+  width: 100%;
+  border-radius: 5px;
+}
+.comments {
+  flex: 25%;
+  background-color: rgb(62, 62, 62);
+  border-radius: 5px;
+}
+.title-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  font-size: 18px;
+}
+.viewers-stream {
+  color: red;
+}
+.info {
+  height: 90px;
+  width: 100%;
+  background-color: rgb(62, 62, 62);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  align-items: center;
+}
+.info-first-section,
+.info-second-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.info-first-section {
+  gap: 10px;
+}
+.info-second-section {
+  gap: 15px;
+}
+.person-img {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(156, 155, 155);
+
+  border-radius: 25px;
+}
+.name-subscribers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.person-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+.person-subscribers {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.658);
+}
+.info-second-section button {
+  border-radius: 25px;
+  padding: 5px 15px;
+  border: none;
+  background-color: rgb(156, 155, 155);
+}
+.likes-dislikes {
+  border-radius: 25px;
+  padding: 0 15px;
+  background-color: rgb(156, 155, 155);
+  display: flex;
+  color: black;
+  position: relative;
+  justify-content: space-between;
+  gap: 30px;
+}
+.like-icon {
+  font-size: 22px;
+}
+.like,
+.dislike {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.between-likes {
+  position: absolute;
+  left: 50%;
+  top: calc(100% - 90%);
+  height: 80%;
+  width: 1px;
+  background-color: black;
+}
