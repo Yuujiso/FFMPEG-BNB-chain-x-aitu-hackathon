@@ -4,6 +4,7 @@ import "../styles/singleStream.css";
 import { BiLike, BiDislike } from "react-icons/bi";
 import Navbar from "../components/Navbar";
 import ReactHlsPlayer from "react-hls-player";
+import Donation from "./Donation";
 export default function SingleStream({ streams }) {
   const url = "http://192.168.248.48/";
   const [hlsUrl, setHlsUrl] = useState(`${url}hls/test.m3u8`);
@@ -11,12 +12,18 @@ export default function SingleStream({ streams }) {
   const stream = streams.find((item) => {
     return item.id === Number(id);
   });
-  console.log(stream);
   const { title, viewers } = stream;
-
+  const [popup, setPopup] = useState(false);
+  const [account, setAccount] = useState(null);
+  const [balance, setBalance] = useState(null);
   return (
     <>
-      <Navbar />
+      <Navbar
+        account={account}
+        setAccount={setAccount}
+        balance={balance}
+        setBalance={setBalance}
+      />
       <div className="stream-container">
         <div className="stream-block">
           <div className="stream-img">
@@ -42,7 +49,12 @@ export default function SingleStream({ streams }) {
             </div>
           </div>
           <div className="info-second-section">
-            <button type="button">subscribe</button>
+            <button
+              type="button"
+              onClick={() => setPopup((lastState) => !lastState)}
+            >
+              donate
+            </button>
             <div className="likes-dislikes">
               <div className="like">
                 <span className="like-icon">
@@ -59,6 +71,14 @@ export default function SingleStream({ streams }) {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        className="donation"
+        style={popup ? { display: "block " } : { display: "none" }}
+      >
+        <div className="popup-main">
+          <Donation account={account} />
         </div>
       </div>
     </>

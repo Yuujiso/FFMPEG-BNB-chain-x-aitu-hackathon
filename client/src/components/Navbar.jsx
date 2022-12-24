@@ -8,10 +8,9 @@ import { Outlet } from "react-router-dom";
 import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ account, setAccount, balance, setBalance }) {
   const [errorMessage, setErrorMessage] = useState(null);
-  const [account, setAccount] = useState(null);
-  const [balance, setBalance] = useState(null);
+
   const [modal, setModal] = useState(false);
   useEffect(() => {
     if (window.ethereum) {

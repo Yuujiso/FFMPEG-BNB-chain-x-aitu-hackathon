@@ -117,3 +117,34 @@
   width: 1px;
   background-color: black;
 }
+.donation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(187, 187, 187);
+  color: black;
+  width: 600px;
+}
+.popup-main {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.popup-main form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.popup-main form .input-section {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.popup-main button {
+  border: none;
+  padding: 5px 15px;
+  border-radius: 25px;
+  background-color: green;
+  color: white;
+}
